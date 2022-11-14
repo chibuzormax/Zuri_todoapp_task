@@ -1,0 +1,31 @@
+// Getting all todo tasks
+GET http://localhost:5000/todo HTTP/1.1
+
+################################
+// Getting a single todo task
+GET http://localhost:5000/todo/63722697b8555381199e7eb0 HTTP/1.1
+
+########
+// Creating a todo Task
+POST http://localhost:5000/todo HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "title": "Coding",
+    "description": "This is me Trying very hard to figure out Node.js with mongodb...."
+}
+
+################################
+// Updating a todo task
+PUT http://localhost:5000/todo/63722697b8555381199e7eb0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Re-Typing",
+    "description": "This is me Re-typing a huge file for Submission..."
+}
+
+################
+// Deleting a todo task
+DELETE http://localhost:5000/todo/63722f3cec1c65c6820e629d HTTP/1.1
